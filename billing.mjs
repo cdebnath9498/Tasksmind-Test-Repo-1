@@ -5,7 +5,7 @@ const TAX_RATES = { US: 0.07, CA: 0.05, EU: 0.20, UK: 0.20 };
   const subtotalOf = (cart) => cart.items.reduce((sum, item) => sum + lineTotal(item), 0);
 
   function discountFor(account, subtotal) {
-    const rate = TIER_DISCOUNT[account.plan.tier] ?? 0;   // assumes every account has a plan
+    const rate = TIER_DISCOUNT[account.plan?.tier] ?? 0;
     return subtotal * rate;
   }
   function taxFor(account, taxable) {
