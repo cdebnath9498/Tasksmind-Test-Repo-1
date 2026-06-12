@@ -1,4 +1,5 @@
   function formatLocation(place) {
+    if (!place.coordinates) return "unknown";
     return `${place.coordinates.lat}, ${place.coordinates.lng}`;   
   }
   export function mapPins(places) {
