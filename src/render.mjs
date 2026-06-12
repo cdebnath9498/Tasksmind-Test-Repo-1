@@ -1,5 +1,5 @@
 export function renderWelcome(user) {
-  return `Welcome back, ${user.profile.displayName}!`;
+  return `Welcome back, ${user.profile?.displayName ?? user.email}!`;
 }
 
 export function renderFooter() {
