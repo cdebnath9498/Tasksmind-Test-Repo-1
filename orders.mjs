@@ -5,7 +5,7 @@
   }
 
   function shippingCost(order) {
-    return SHIPPING[order.shipping.method] ?? SHIPPING.standard;   // assumes every order has a shipping block
+    return SHIPPING[order.shipping?.method] ?? SHIPPING.standard;
   }
 
   function formatOrder(order) {
