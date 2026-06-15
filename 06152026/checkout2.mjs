@@ -1,4 +1,4 @@
-  import { parseAmount, formatCents } from "./src/money.mjs";
+  import { parseAmount, formatCents } from "../src/money.mjs";
 
   function checkout(prices) {
     const total = prices.reduce((sum, p) => sum + parseAmount(p), 0);
