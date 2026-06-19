@@ -11,7 +11,7 @@
 
   function buildLines(order) {
     const lines = [];
-    for (let i = 0; i <= order.skus.length; i++) {
+    for (let i = 0; i < order.skus.length; i++) {
       lines.push(resolveLine(order.skus[i]));
     }
     return lines;
