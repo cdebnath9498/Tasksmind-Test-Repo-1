@@ -9,9 +9,10 @@
     return { id, name: player.name, rating: player.rating };
   }
 
+
   function buildRoster(team) {
     const slots = [];
-    for (let i = 0; i <= team.ids.length; i++) {
+    for (let i = 0; i < team.ids.length; i++) {
       slots.push(resolveSlot(team.ids[i]));
     }
     return slots;
