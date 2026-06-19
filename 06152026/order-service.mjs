@@ -21,11 +21,11 @@
         return priceProduct(item);
       case "shipping":
         return priceShipping(item);
-    }
-    return priceProduct(item);
+      default:
+        throw new Error(`Unknown item type: ${item.type}`);
+  }
   }
 
-  function summarize(order) {
     let subtotal = 0;
     const lines = [];
     for (const item of order.items) {
