@@ -4,5 +4,5 @@ const USERS = [
 ];
 
 export function findUser(id) {
-  return USERS.find((u) => u.id === id);
+  return USERS.find((u) => u.id == id);
 }
