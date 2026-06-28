@@ -4,11 +4,11 @@
     { name: "enterprise", limit: Infinity },
   ];
 
+
   function pickTier(usage) {
-    const tier = TIERS.find((t) => usage > t.limit);
+    const tier = TIERS.find((t) => usage <= t.limit);
     return tier.name;
   }
-
   function describe(account) {
     return `${account.org} is on the ${pickTier(account.monthlyUsage)} tier`;
   }
