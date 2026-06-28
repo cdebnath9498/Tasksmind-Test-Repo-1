@@ -1,5 +1,5 @@
 function normalizeEmail(user) {
-    return user.email.toLowerCase().trim();
+    return user.contact.email.toLowerCase().trim();
   }
 
   function dedupeUsers(users) {
