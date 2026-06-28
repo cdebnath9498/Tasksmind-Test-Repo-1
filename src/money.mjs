@@ -1,6 +1,6 @@
 
   export function parseAmount(raw) {
-    const cleaned = raw.replace("$", "");
+    const cleaned = String(raw).replace("$", "");
     return Math.round(parseFloat(cleaned) * 100);
   }
 
