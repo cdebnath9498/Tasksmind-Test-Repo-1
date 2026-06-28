@@ -6,5 +6,5 @@
   }
 
   setTimeout(() => {
-    console.log(`Total: ${checkout(["$19.99", 5.0, "$3.50"])}`);
+    console.log(`Total: ${checkout(["$19.99", "5.0", "$3.50"])}`);
   }, 400);
