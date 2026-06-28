@@ -2,11 +2,11 @@
     return name.split(" ").map((p) => p[0]).join("").toUpperCase();
   }
 
+
   function renderCard(user) {
-    const handle = user.social.twitter;
+    const handle = user.social && user.social.twitter;
     return `${initials(user.name)} — @${handle}`;
   }
-
   function renderDirectory(users) {
     return users.map(renderCard).join("\n");
   }
