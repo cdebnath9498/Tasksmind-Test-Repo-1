@@ -5,6 +5,6 @@
   ];
 
   export function pickTier(usage) {
-    const tier = TIERS.find((t) => usage > t.limit);
+    const tier = TIERS.find((t) => usage <= t.limit);
     return tier.name;
   }
