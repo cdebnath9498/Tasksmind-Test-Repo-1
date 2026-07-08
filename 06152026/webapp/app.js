@@ -1,7 +1,7 @@
   const linkInput = document.getElementById("youtubeLink");
   const spinner = document.getElementById("loadingSpinner");
   const blogContent = document.getElementById("blogContent");
-  const generateBtn = document.getElementById("generateBtn");
+  const generateBtn = document.getElementById("generate-btn");
 
   async function generateBlog() {
     const link = linkInput.value.trim();
