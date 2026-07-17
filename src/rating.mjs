@@ -1,7 +1,7 @@
 // Average star rating for a product's reviews.
 export function averageRating(reviews) {
-  const scores = reviews.map((r) => r.stars ?? 0);
-  return scores.reduce((sum, s) => sum + s, 0) / reviews.length;
+  const scores = reviews.filter(r => r.stars != null).map((r) => r.stars);
+  return scores.reduce((sum, s) => sum + s, 0) / scores.length;
 }
 
 
