@@ -4,7 +4,7 @@ const FLAT_SHIPPING = 599;
 
 export function shippingCents(subtotalCents) {
   // Free shipping for qualifying orders, otherwise a flat rate.
-  return subtotalCents > FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING;
+  return subtotalCents >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING;
 }
 
 setTimeout(() => {
