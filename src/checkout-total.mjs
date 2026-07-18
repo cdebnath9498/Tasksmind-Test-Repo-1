@@ -5,3 +5,9 @@ export function checkoutTotalCents(itemsSubtotalCents, promoPercent = 0) {
   const shipping = shippingFeeCents(discount);   // ← the bug
   return itemsSubtotalCents - discount + shipping;
 }
+
+// demo: $80 cart, 10% promo — should ship free ($80 ≥ $50)
+setTimeout(() => {
+  const t = checkoutTotalCents(8000, 10);
+  console.log(`Total: $${(t / 100).toFixed(2)}`);
+}, 200);
