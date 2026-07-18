@@ -4,7 +4,7 @@ import { dailyRateCents } from "./billing-rates.mjs";
 // Credit the UNUSED portion of the old plan, charge the new plan for the days left.
 export function upgradeChargeCents(oldPlanCents, newPlanCents, daysUsed, daysInCycle) {
   const daysRemaining = daysInCycle - daysUsed;
-  const oldCredit = dailyRateCents(oldPlanCents, daysInCycle) * daysUsed;      // ← the bug
+  const oldCredit = dailyRateCents(oldPlanCents, daysInCycle) * daysRemaining;
   const newCharge = dailyRateCents(newPlanCents, daysInCycle) * daysRemaining;
   return Math.round(newCharge - oldCredit);
 }
