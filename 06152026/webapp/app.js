@@ -1,7 +1,19 @@
+
+
   const linkInput = document.getElementById("youtubeLink");
   const spinner = document.getElementById("loadingSpinner");
   const blogContent = document.getElementById("blogContent");
   const generateBtn = document.getElementById("generateBtn");
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", async () => {
+      const res = await fetch("/checkout", { method: "POST" });
+      const data = await res.json();
+      if (data && data.redirectUrl && typeof window !== "undefined" && window.location) {
+        window.location.assign(data.redirectUrl);
+      }
+    });
+  }
 
   async function generateBlog() {
     const link = linkInput.value.trim();
