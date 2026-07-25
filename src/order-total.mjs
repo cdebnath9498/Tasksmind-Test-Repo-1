@@ -5,7 +5,7 @@ const TAX_RATE = 0.08;
 export function orderTotalCents({ items, discountPercent = 0 }) {
   const subtotal = items.reduce((sum, it) => sum + it.priceCents * it.qty, 0);
   const discount = Math.round(subtotal * (discountPercent / 100));
-  const tax = Math.round(subtotal * TAX_RATE);
+  const tax = Math.round((subtotal - discount) * TAX_RATE);
   return subtotal - discount + tax;
 }
 
