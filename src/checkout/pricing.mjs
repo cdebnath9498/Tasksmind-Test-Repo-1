@@ -94,7 +94,7 @@ function calculateOrderTotal(order) {
   };
 }
 
-module.exports = {
+export {
   calculateOrderTotal,
   calcSubtotal,
   calcDiscount,
